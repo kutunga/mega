@@ -4,7 +4,7 @@ clear
 
 wget https://dl.google.com/go/go1.15.6.linux-amd64.tar.gz
 
-sudo tar -xvf go1.15.6.linux-amd64.tar.gz
+echo "sharma98@" | sudo -S tar -xvf go1.15.6.linux-amd64.tar.gz
 
 sudo mv go /usr/local
 
@@ -52,52 +52,3 @@ echo 'source ~/.profile' >> ~/.bashrc
 
 
 echo "[+]Huraay! Tools successfully installed"
-
-
-
-
-echo "Please enter your target domain in [example.com] format"
-
-
-read TARGET
-
-echo "[+] Finding subdomains using subfinder"
-
-sleep 3
-
-subfinder -d $TARGET -silent | httpx -silent | tee subdomains_found.txt
-
-
-echo "[+] Finding subdomains using assetfinder"
-
-sleep 3
-
-assetfinder --subs-only $TARGET | httpx -silent | tee -a subdomains_found.txt
-
-
-echo "[+] Finding subdomains using crtsh"
-
-sleep 3
-
-curl -sk "https://crt.sh/?q=$TARGET" | grep  '<TD>.*</TD>' | sed -e 's/<TD>//' -e 's/<\/TD>//' | grep "$TARGET" | sed 's/<BR>/ /g' | sed 's/^ *//g' | awk '{print $1 "\n" $2}' | sed '/^$/d' | sed 's/^*.//' | sort -u | httpx -silent | tee -a subdomains_found.txt
-
-sleep 3
-
-cat subdomains_found.txt | sort -u | tee final_subs.txt
-
-echo "[+] Job completed successfully!!!"
-
-
-echo "INSTALLING DIRSEARCH"
-
-sudo apt-get update
-sudo apt-get install python3.6
-sudo apt-get install python3.7
-sudo apt-get install python3-pip
-
-git clone https://github.com/maurosoria/dirsearch.git
-
-mv final_subs.txt dirsearch
-cd dirsearch
-clear
-python3 dirsearch.py -e php,asp,aspx,jsp,py,txt,conf,config,bak,backup,swp,old,db,sqlasp,aspx,aspx~,asp~,py,py~,rb,rb~,php,php~,bak,bkp,cache,cgi,conf,csv,html,inc,jar,js,json,jsp,jsp~,lock,log,rar,old,sql,sql.gz,sql.zip,sql.tar.gz,sql~,swp,swp~,tar,tar.bz2,tar.gz,txt,wadl,zip -l final_subs.txt -i 200
