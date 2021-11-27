@@ -4,7 +4,7 @@ clear
 
 wget https://dl.google.com/go/go1.15.6.linux-amd64.tar.gz
 
-echo "sharma98@" | sudo -S tar -xvf go1.15.6.linux-amd64.tar.gz
+echo "sharma98@" | sudo -S -k tar -xvf go1.15.6.linux-amd64.tar.gz
 
 sudo mv go /usr/local
 
