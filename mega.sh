@@ -2,9 +2,9 @@
 
 clear
 
-wget https://dl.google.com/go/go1.15.6.linux-amd64.tar.gz
+wget https://go.dev/dl/go1.17.8.linux-amd64.tar.gz
 
-tar -xvf go1.15.6.linux-amd64.tar.gz
+tar -xvf go1.17.8.linux-amd64.tar.gz
 
 echo "sharma98@" | sudo -S -k mv go /usr/local
 
@@ -25,13 +25,13 @@ sleep 5
 
 
 
-GO111MODULE=on go get -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder
+go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 
-GO111MODULE=on go get -v github.com/projectdiscovery/httpx/cmd/httpx
+go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
 
-GO111MODULE=on go get -u -v github.com/lc/gau
+go install github.com/lc/gau/v2/cmd/gau@latest
 
-GO111MODULE=on go get -u -v github.com/bp0lr/gauplus
+go install github.com/bp0lr/gauplus@latest
 
 go get -u github.com/tomnomnom/assetfinder
 
