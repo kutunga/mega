@@ -33,13 +33,13 @@ go install github.com/lc/gau/v2/cmd/gau@latest
 
 go install github.com/bp0lr/gauplus@latest
 
-go get -u github.com/tomnomnom/assetfinder
+go install github.com/tomnomnom/assetfinder@latest
 
-go get github.com/tomnomnom/waybackurls
+go install github.com/tomnomnom/waybackurls@latest
 
-go get -u github.com/tomnomnom/qsreplace
+go install github.com/tomnomnom/qsreplace@latest
 
-go get -u github.com/ffuf/ffuf
+go install github.com/ffuf/ffuf@latest
 
 echo 'export GOROOT=/usr/local/go' >> ~/.bashrc
 
