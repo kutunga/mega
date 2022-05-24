@@ -6,11 +6,11 @@ apt update -y
 
 apt upgrade -y
 
-apt-get install build-essential
+apt-get install build-essential -y
 
-apt install git
+apt install git -y
 
-apt install zip
+apt install zip -y
 
 wget https://go.dev/dl/go1.17.8.linux-amd64.tar.gz
 
