@@ -71,6 +71,4 @@ cd SRAS
 
 chmod +x *
 
-./tools.sh
 
-cd ../
