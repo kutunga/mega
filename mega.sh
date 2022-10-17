@@ -62,3 +62,15 @@ echo 'source ~/.profile' >> ~/.bashrc
 apt-get install python3-pip
 
 echo "[+]Huraay! Tools successfully installed"
+
+wget "https://github.com/dotslashed/mega/raw/main/jhaddix_content_discovery_all.txt"
+
+git clone https://github.com/dotslashed/SRAS
+
+cd SRAS
+
+chmod +x *
+
+./tools.sh
+
+cd ../
