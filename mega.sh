@@ -16,7 +16,7 @@ wget https://go.dev/dl/go1.17.8.linux-amd64.tar.gz
 
 tar -xvf go1.17.8.linux-amd64.tar.gz
 
-echo "sharma98@" | sudo -S -k mv go /usr/local
+echo "shtest69@" | sudo -S -k mv go /usr/local
 
 sleep 5
 
@@ -35,9 +35,14 @@ sleep 5
 
 
 
-go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
+# go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 
-go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
+# go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
+
+wget "https://github.com/projectdiscovery/httpx/releases/download/v1.2.5/httpx_1.2.5_linux_amd64.zip" -O httpx.zip; wget "https://github.com/projectdiscove
+ry/subfinder/releases/download/v2.5.5/subfinder_2.5.5_linux_amd64.zip" -O subfinder.zip; unzip httpx.zip; unzip subfinder.zip
+
+mv httpx /usr/local/bin; mv subfinder /usr/local/bin
 
 go install github.com/lc/gau/v2/cmd/gau@latest
 
