@@ -39,8 +39,7 @@ sleep 5
 
 # go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
 
-wget "https://github.com/projectdiscovery/httpx/releases/download/v1.2.5/httpx_1.2.5_linux_amd64.zip" -O httpx.zip; wget "https://github.com/projectdiscove
-ry/subfinder/releases/download/v2.5.5/subfinder_2.5.5_linux_amd64.zip" -O subfinder.zip; unzip httpx.zip; unzip subfinder.zip
+wget "https://github.com/projectdiscovery/httpx/releases/download/v1.2.5/httpx_1.2.5_linux_amd64.zip" -O httpx.zip; wget "https://github.com/projectdiscovery/subfinder/releases/download/v2.5.5/subfinder_2.5.5_linux_amd64.zip" -O subfinder.zip; unzip httpx.zip; unzip subfinder.zip
 
 mv httpx /usr/local/bin; mv subfinder /usr/local/bin
 
